@@ -10,7 +10,7 @@ shapePredictorPath = 'dataset/shape_predictor_68_face_landmarks.dat'
 faceDetector = dlib.get_frontal_face_detector()
 facialLandmarkPredictor = dlib.shape_predictor(shapePredictorPath)
 
-vs = FileVideoStream(usePiCamera = False).start()
+vs = VideoStream(usePiCamera = False).start()
 time.sleep(2.0)
 
 while True:
