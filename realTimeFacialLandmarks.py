@@ -24,7 +24,7 @@ while True:
 		facialLandmarks = face_utils.shape_to_np(facialLandmarks)
  		
 		(x, y, w, h) = face_utils.rect_to_bb(face)
-		cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+		cv2.rectangle(frame, (x+1, y+1), (x+w+1, y+h+1), (0, 255, 0), 2)
 		cv2.putText(frame, '#{}'.format(i+1), (x, y-10),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
